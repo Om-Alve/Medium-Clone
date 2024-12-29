@@ -13,7 +13,7 @@ export const Publish = () => {
   const [publishing, setPublishing] = useState(false);
   const navigate = useNavigate();
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setPublishing(true);
     setError('');

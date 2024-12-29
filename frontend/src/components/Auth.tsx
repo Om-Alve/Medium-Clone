@@ -5,6 +5,7 @@ import { InputForm } from "./InputForm"
 import { AuthHeader } from "./AuthHeader"
 import axios from "axios"
 import { useNavigate } from "react-router-dom"
+import { ChangeEvent } from "react"
 
 export const SignInAuth = () => {
   const [postInputs, setPostInputs] = useState<SignInInput>({
