@@ -4,7 +4,7 @@ interface BlogProps {
   authorName: string
   title: string
   content: string
-  publishedDate: string
+  publishDate: string
   blogId: string
 }
 
@@ -41,7 +41,7 @@ export const SkeletonBlogCard = () => {
     </div>
   );
 };
-export const BlogCard = ({ authorName, title, content, publishedDate, blogId }: BlogProps) => {
+export const BlogCard = ({ authorName, title, content, publishDate, blogId }: BlogProps) => {
   return (
     <Link to={`/blog/${blogId}`}>
       <div className="p-4 border-b border-slate-200 w-screen max-w-screen-lg">
@@ -54,7 +54,7 @@ export const BlogCard = ({ authorName, title, content, publishedDate, blogId }: 
             <Circle />
           </div>
           <div className="flex flex-col justify-center font-thin text-slate-400 text-sm">
-            {publishedDate}
+            {new Date(publishDate).toLocaleDateString('en-US', { day: 'numeric', month: 'short' })}
           </div>
 
         </div>

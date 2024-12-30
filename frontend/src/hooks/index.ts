@@ -9,6 +9,7 @@ export interface Blog {
   author: {
     username: string;
   };
+  publishDate: string;
 }
 
 export const useBlog = ({ id }: { id: string }) => {
@@ -20,6 +21,7 @@ export const useBlog = ({ id }: { id: string }) => {
     author: {
       username: "",
     },
+    publishDate: "",
   });
 
   useEffect(() => {
